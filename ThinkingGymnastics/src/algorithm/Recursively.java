@@ -47,6 +47,20 @@ public class Recursively {
 			return recursive2(i-1)*i;
 		}
 	}
+	
+	/*
+	 * this is a Tower of Hanoi.
+	 * @param i {int} is number of dish
+	 * @return number of move
+	 * */
+	public int hanoi(int i) {
+		if(i==1) {
+			return 1;
+		}
+		else {
+			return 2*hanoi(i-1)+1;
+		}
+	}
 	public static void main(String[] args) {
 		Recursively r = new Recursively();
 		int i=10;
@@ -54,6 +68,7 @@ public class Recursively {
 		System.out.println("Integer.MAX_VALUE="+Long.MAX_VALUE);
 		System.out.println(" 1+2+3+...+i recursive("+i+")="+r.recursive1(i));
 		System.out.println(" 1*2*3*...*i recursive("+i+")="+r.recursive2(i));
+		System.out.println("Hanoi("+i+")="+r.hanoi(i));
 	}
 
 }
