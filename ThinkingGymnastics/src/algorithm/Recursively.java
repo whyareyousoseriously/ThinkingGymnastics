@@ -1,5 +1,7 @@
 package algorithm;
 
+import java.util.Scanner;
+
 public class Recursively {
 	/*
 	 * this algorithm is a simple recursive function
@@ -61,14 +63,50 @@ public class Recursively {
 			return 2*hanoi(i-1)+1;
 		}
 	}
+	/*
+	 * Input check positive Integer.
+	 * @param i {int}
+	 * @return true or false.
+	 *
+	 * */
+	public boolean checkPositiveInteger(int i) {
+		if(i<=0) {
+			System.out.println("Input error! cann't be 0 or negative");
+			return false;
+		}else {
+			return true;
+		}
+	}
+	/*
+	 * Input check natural number
+	 * @param i {int}
+	 * @return true or false
+	 * */
+	public boolean checkNaturalNumber(int i) {
+		if(i<0) {
+			System.out.println("Input error! cann't be negative");
+			return false;
+		}else {
+			return true;
+		}
+		
+	}
 	public static void main(String[] args) {
 		Recursively r = new Recursively();
-		int i=10;
+		int i;
+		Scanner s = new Scanner(System.in);
+		i = s.nextInt();
 		System.out.println("Integer.MAX_VALUE="+Integer.MAX_VALUE);
 		System.out.println("Integer.MAX_VALUE="+Long.MAX_VALUE);
-		System.out.println(" 1+2+3+...+i recursive("+i+")="+r.recursive1(i));
-		System.out.println(" 1*2*3*...*i recursive("+i+")="+r.recursive2(i));
-		System.out.println("Hanoi("+i+")="+r.hanoi(i));
+		if(r.checkPositiveInteger(i)) {
+			System.out.println(" 1+2+3+...+i recursive("+i+")="+r.recursive1(i));
+			System.out.println("Hanoi("+i+")="+r.hanoi(i));
+		}
+		if(r.checkNaturalNumber(i)) {
+			System.out.println(" 1*2*3*...*i recursive("+i+")="+r.recursive2(i));
+		}
+		
+		
 	}
 
 }
