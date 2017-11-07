@@ -64,6 +64,24 @@ public class Recursively {
 		}
 	}
 	/*
+	 * this is a Fibonacci problem.
+	 * @param i {int}
+	 * @return the number of ith.
+	 * */
+	public int Fibonacci(int i) {
+		if(i==0) {
+			return 0;
+		}
+		if(i==1) {
+			return 1;
+		}
+		else{
+			//System.out.println("Fibonacci("+i+")"+"Fibonacci("+(i-1)+")+Fibonacci("+(i-2)+")="+Fibonacci(i-1)+"+"+Fibonacci(i-2));
+			return Fibonacci(i-1)+Fibonacci(i-2);
+			
+		}
+	}
+	/*
 	 * Input check positive Integer.
 	 * @param i {int}
 	 * @return true or false.
@@ -101,6 +119,7 @@ public class Recursively {
 		if(r.checkPositiveInteger(i)) {
 			System.out.println(" 1+2+3+...+i recursive("+i+")="+r.recursive1(i));
 			System.out.println("Hanoi("+i+")="+r.hanoi(i));
+			System.out.println("r.Fibonacci("+i+")="+r.Fibonacci(i));
 		}
 		if(r.checkNaturalNumber(i)) {
 			System.out.println(" 1*2*3*...*i recursive("+i+")="+r.recursive2(i));
