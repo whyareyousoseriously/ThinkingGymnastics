@@ -1,5 +1,9 @@
 package algorithm;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 public class BruteForceMethod {
 
 	/*
@@ -59,6 +63,29 @@ public class BruteForceMethod {
 		}
 		return -1;
 	}
+	/*
+	 * the traveling salesman problem.TSP;use brute force
+	 * @param a[0..n][0..n],a two-dimensional array that storage the distance data.
+	 * @return a array that have an optimal distance scheme.
+	 * */
+	public ArrayList TSP(int [][] a) {
+		//every ArrayList storage a sequence.this ArrayList storage a sequence
+		ArrayList a_single = new ArrayList();
+		//this HashMap  storage everything else ArrayList.
+		Map a_gather = new HashMap();
+		//this ArrayList storage a sequence that have a optimal distance scheme.
+		ArrayList a_best_single = new ArrayList();
+		//this is not a simple for loop can solve. this need a dynamic loop. so I want to choose recursion.
+		
+		return a_best_single;
+	}
+	/*
+	 * this is we need dynamic loop can solve a full permutation problem.
+	 * @param ArrayList that want to do a full permutation
+	 * @return HashMap that storage everything possible permutation
+	 * 
+	 * */
+	
 	/*
 	 * iterate and output arrays
 	 * */
