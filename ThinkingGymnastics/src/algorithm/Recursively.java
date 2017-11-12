@@ -1,6 +1,6 @@
 package algorithm;
 
-import java.util.Scanner;
+
 
 public class Recursively {
 	/*
@@ -10,7 +10,7 @@ public class Recursively {
 	 * 
 	 * 这是一个非常简单的递归计算1+2+3+。。i的值
 	 */
-	public int recursive1(int i) {
+	public static int recursive1(int i) {
 		if(i==1) {
 			return 1;
 		}
@@ -25,7 +25,7 @@ public class Recursively {
 	 * @param i {long}
 	 * @return 
 	 * */
-	public long recursive1Plus(long i) {
+	public static long recursive1Plus(long i) {
 		if(i==1) {
 			return 1;
 		}
@@ -40,7 +40,7 @@ public class Recursively {
 	 * 
 	 * 这是一个非常简单的递归计算阶乘
 	 */
-	public int recursive2(int i) {
+	public static int recursive2(int i) {
 		if(i==0) {
 			//according definition 0!=1
 			return 1;
@@ -55,7 +55,7 @@ public class Recursively {
 	 * @param i {int} is number of dish
 	 * @return number of move
 	 * */
-	public int hanoi(int i) {
+	public static int hanoi(int i) {
 		if(i==1) {
 			return 1;
 		}
@@ -68,7 +68,7 @@ public class Recursively {
 	 * @param i {int}
 	 * @return the number of ith.
 	 * */
-	public int Fibonacci(int i) {
+	public static int Fibonacci(int i) {
 		if(i==0) {
 			return 0;
 		}
@@ -87,7 +87,7 @@ public class Recursively {
 	 * @return true or false.
 	 *
 	 * */
-	public boolean checkPositiveInteger(int i) {
+	public static boolean checkPositiveInteger(int i) {
 		if(i<=0) {
 			System.out.println("Input error! cann't be 0 or negative");
 			return false;
@@ -100,7 +100,7 @@ public class Recursively {
 	 * @param i {int}
 	 * @return true or false
 	 * */
-	public boolean checkNaturalNumber(int i) {
+	public static boolean checkNaturalNumber(int i) {
 		if(i<0) {
 			System.out.println("Input error! cann't be negative");
 			return false;
